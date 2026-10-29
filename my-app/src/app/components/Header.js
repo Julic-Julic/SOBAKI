@@ -8,10 +8,8 @@ export default function Header() {
 
   return (
     <header className="absolute top-0 w-full z-50 pt-2 px-4">
-      {/* Белая плашка */}
       <div className="container mx-auto max-w-7xl bg-white rounded-[20px] shadow-sm py-4 px-6 flex justify-between items-center">
-        
-        {/* Логотип + Текст */}
+
         <Link href="/" className="flex items-center gap-3">
           <Image src="/logo.png" alt="Логотип" width={40} height={40} className="object-contain" />
           <span className="font-bold text-lg text-vetOrange uppercase tracking-wide hidden sm:block">
@@ -19,19 +17,16 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Адрес (по центру) */}
         <div className="hidden md:block text-xs text-gray-500 text-center">
           <p>Работаем круглосуточно</p>
           <p className="font-medium text-gray-700">Подольск, ул.Чайковского, 48А</p>
         </div>
 
-        {/* Телефон и Меню (справа) */}
         <div className="flex items-center gap-6">
           <a href="tel:+795667964366" className="font-bold text-sm text-gray-800 hover:text-vetOrange transition">
             +7 (956) 6796 43 66
           </a>
-          
-          {/* Бургер (3 полоски как на макете) */}
+
           <button 
             className="flex flex-col gap-1.5 w-6" 
             onClick={() => setIsOpen(!isOpen)}
@@ -44,7 +39,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Выпадающее меню (для мобилок) */}
       {isOpen && (
         <div className="absolute top-24 left-4 right-4 bg-white rounded-2xl shadow-xl p-6 flex flex-col gap-4 md:hidden">
           <Link href="/" onClick={() => setIsOpen(false)} className="font-semibold hover:text-vetOrange">Главная</Link>

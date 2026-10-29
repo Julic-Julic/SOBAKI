@@ -2,25 +2,48 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-white py-8">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row gap-4 h-[300px]">
-        <div className="md:w-1/3 bg-gray-50 p-8 rounded-2xl flex flex-col justify-between border border-gray-100">
-          <div>
-            <Image src="/logo.png" alt="Доктор Тома" width={120} height={40} className="mb-6 object-contain" />
-            <p className="text-sm text-gray-800 font-medium mb-1">Парковый пр., Чайковского, 48А</p>
-            <p className="text-sm font-bold text-gray-800 mb-6">+7 (966) 076 43 66</p>
+
+    <footer className="bg-[#496937] py-12 px-4">
+
+      <div className="container mx-auto max-w-[1200px]">
+        <div className="bg-white rounded-[40px] overflow-hidden flex flex-col md:flex-row min-h-[450px] shadow-xl">
+
+          <div className="w-full md:w-1/2 p-10 md:p-14 flex flex-col justify-between">
+
+            <div>
+              <Image 
+                src="/log.png" 
+                alt="Доктор Тома" 
+                width={140} 
+                height={120} 
+                className="object-contain" 
+              />
+            </div>
+            <div className="mt-auto pt-16">
+              <p className="text-gray-900 font-medium mb-1">Подольск, ул. Чайковского, 48А</p>
+              <p className="text-gray-900 font-bold mb-6">+7 (956) 6796 43 66</p>
+              <p className="text-xs text-gray-400">Круглосуточно</p>
+            </div>
+
+            <div className="mt-12 pt-6 border-t border-gray-200 flex flex-wrap gap-x-6 gap-y-2 text-[11px] text-gray-400">
+              <a href="#" className="hover:text-[#F17021] transition">Договор оферты</a>
+              <a href="#" className="hover:text-[#F17021] transition">Политика конфиденциальности</a>
+              <a href="#" className="hover:text-[#F17021] transition">Доктор Тома</a>
+            </div>
+            
           </div>
-          <div className="flex flex-col gap-2 text-[10px] text-gray-400">
-            <a href="#" className="hover:text-vetOrange transition underline decoration-gray-300">Политика конфиденциальности</a>
-            <a href="#" className="hover:text-vetOrange transition underline decoration-gray-300">Согласие на обработку персональных данных</a>
+
+          <div className="w-full md:w-1/2 h-[350px] md:h-auto relative bg-gray-200">
+            <iframe 
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A1a2b3c4d5e6f7g8h9i0j&source=constructor" 
+              width="100%" 
+              height="100%" 
+              frameBorder="0" 
+              title="Карта" 
+              className="absolute inset-0 w-full h-full grayscale-[30%] hover:grayscale-0 transition-all duration-500"
+            ></iframe>
           </div>
-        </div>
-        
-        <div className="md:w-2/3 rounded-2xl overflow-hidden bg-gray-200 relative">
-          <iframe 
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A1a2b3c4d5e6f7g8h9i0j&amp;source=constructor" 
-            width="100%" height="100%" frameBorder="0" title="Карта" className="absolute inset-0 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-500">
-          </iframe>
+
         </div>
       </div>
     </footer>

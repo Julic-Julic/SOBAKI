@@ -67,30 +67,45 @@ export const services = [
   { 
     id: 'instrumentalnaya-diagnostika', 
     title: 'Инструментальная диагностика', 
-    image: '/service-dog.png', // Картинка пуделя
-    icon: '🩺' 
+    image: '/e1.png', 
+    iconImage: '/lo1.png',
   },
   { 
     id: 'laboratornye-issledovaniya', 
     title: 'Лабораторные исследования', 
-    pattern: true, // Флаг, что нужен паттерн с лапками
-    icon: '🧪' 
+    image: '/e2.png', 
+    iconImage: '/lo2.png',
   },
   { 
     id: 'hirurgiya', 
     title: 'Хирургия', 
-    image: '/service-rabbit.png', // Картинка кролика
-    icon: '🩹' 
+    image: '/e3.png', 
+    iconImage: '/lo3.png',
   },
   { 
     id: 'terapiya', 
     title: 'Терапия и профилактика', 
-    icon: '🩺' 
+    iconImage: '/lo4.png', 
   },
 ];
 
 export const team = [
-  { id: 'lastochkina', name: 'Ласточкина Татьяна Евгеньевна', role: 'Терапевт, хирург, стоматолог', image: '/doctor1.jpg.png' },
-  { id: 'zhuravlev', name: 'Журавлев Игорь Николаевич', role: 'Терапевт, хирург, стоматолог', image: '/doctor2.jpg.png' },
-  { id: 'ryabova', name: 'Рябова Ирина Владимировна', role: 'Терапевт, хирург, стоматолог', image: '/doctor3.jpg.png' },
+  { 
+    id: 'lastochkina', 
+    name: 'Ласточкина Татьяна\nЕвгеньевна', 
+    role: 'Терапевт, хирург, стоматолог', 
+    image: '/doctor1.png' 
+  },
+  { 
+    id: 'zhuravlev', 
+    name: 'Журавлев Игорь\nНиколаевич', 
+    role: 'Терапевт, хирург, стоматолог', 
+    image: '/doctor2.jpg' 
+  },
+  { 
+    id: 'ryabova', 
+    name: 'Рябова Ирина\nВладимировна', 
+    role: 'Терапевт, хирург, стоматолог', 
+    image: '/doctor3.jpg' 
+  },
 ];
