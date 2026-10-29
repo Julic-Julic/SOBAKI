@@ -6,9 +6,10 @@ import ServicesSection from './components/ServicesSection';
 import TeamSection from './components/TeamSection';
 import Image from 'next/image';
 
+
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <HeroSection />
       <PromoSlider />
       <FeaturesGrid />

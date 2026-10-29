@@ -10,8 +10,8 @@ module.exports = {
     extend: {
       colors: {
         vetOrange: '#F17021',
-        vetDark: '#3D5B43',
-        vetLight: '#557A5F',
+        vetDark: '#496937',
+        vetLight: '#496937',
         vetGray: '#F2F2F2',
       },
       fontFamily: {

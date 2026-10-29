@@ -13,36 +13,33 @@ export default function Home() {
       <PromoSlider />
       <FeaturesGrid />
       
-      {/* Вызов врача на дом */}
-      <section className="bg-vetLight py-20">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="md:w-1/2 relative h-[400px] w-full rounded-3xl overflow-hidden">
-             <Image src="/doctor-call.jpg" alt="Врач" fill className="object-cover object-top" />
-          </div>
-          <div className="md:w-1/2 text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Вызов врача на дом</h2>
-            <p className="text-white/80 mb-8 max-w-sm text-sm">Вашему питомцу требуется неотложная помощь? Приедем в течение 40 минут!</p>
-            <ContactForm buttonText="отправить" />
+      <section className="bg-[#496937] py-20">
+      <div className="container mx-auto px-4 max-w-[1100px]">
+
+          <div className="relative bg-[#43453F] rounded-[50px] overflow-hidden min-h-[450px] flex items-center shadow-xl">
+            
+            <Image 
+              src="/doctor-call.png" 
+              alt="Врач на дом" 
+              fill 
+              className="object-cover object-left" 
+            />
+
+            <div className="relative z-10 w-full md:w-1/2 p-10 md:p-14 ml-auto text-white">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">Вызов врача на дом</h2>
+              <p className="text-white/80 mb-8 text-sm max-w-sm">
+                Вашему питомцу требуется неотложная помощь? Приедем в течение 40 минут!
+              </p>
+              
+              <ContactForm buttonText="ОТПРАВИТЬ" />
+            </div>
+            
           </div>
         </div>
       </section>
 
       <ServicesSection />
       <TeamSection />
-
-      {/* Записаться на прием */}
-      <section className="bg-vetLight py-20">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12">
-           <div className="md:w-1/2 relative h-[400px] w-full rounded-3xl overflow-hidden">
-             <Image src="/dog-collar.jpg" alt="Собака" fill className="object-cover" />
-          </div>
-          <div className="md:w-1/2 text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Запишитесь на прием <br/><span className="italic font-light">прямо сейчас!</span></h2>
-            <p className="text-white/80 mb-8 max-w-sm text-sm">Не откладывайте профилактику и лечение заболеваний питомца, оставляйте заявку и наш менеджер свяжется с вами</p>
-            <ContactForm buttonText="отправить" />
-          </div>
-        </div>
-      </section>
     </main>
   );
 }
