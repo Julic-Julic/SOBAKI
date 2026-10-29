@@ -1,4 +1,3 @@
-// src/app/layout.js
 import { Montserrat } from 'next/font/google';
 import './globals.css';
 import Header from './components/Header';
@@ -8,17 +7,15 @@ const montserrat = Montserrat({ subsets: ['latin', 'cyrillic'] });
 
 export const metadata = {
   title: 'Доктор Тома — Ветеринарная клиника',
-  description: 'Полный спектр услуг: от диагностики и лечения, до медицинского сопровождения питомцев разного вида и возраста',
+  description: 'Полный спектр услуг',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
-      <body className={`${montserrat.className} bg-vetBgLight flex flex-col min-h-screen`}>
+      <body className={`${montserrat.className} bg-white antialiased overflow-x-hidden`}>
         <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
+        {children}
         <Footer />
       </body>
     </html>

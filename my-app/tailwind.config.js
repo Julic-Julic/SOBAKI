@@ -8,10 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        vetOrange: '#E76F20', // Цвет кнопок и акцентов
-        vetGreenDark: '#3A5B44', // Темно-зеленый фон
-        vetGreenLight: '#537A5D', // Светло-зеленый фон
-        vetBgLight: '#F8F8F8', // Светлый фон страницы
+        vetOrange: '#F17021', // Оранжевый
+        vetDark: '#3D5B43',   // Темно-зеленый
+        vetLight: '#557A5F',  // Светло-зеленый (для фонов форм)
+        vetGray: '#F2F2F2',   // Светло-серый для карточек
       },
       fontFamily: {
         sans: ['var(--font-montserrat)', 'sans-serif'],
