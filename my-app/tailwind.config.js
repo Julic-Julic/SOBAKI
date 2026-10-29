@@ -1,3 +1,4 @@
+// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -8,13 +9,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        vetOrange: '#F17021', // Оранжевый
-        vetDark: '#3D5B43',   // Темно-зеленый
-        vetLight: '#557A5F',  // Светло-зеленый (для фонов форм)
-        vetGray: '#F2F2F2',   // Светло-серый для карточек
+        vetOrange: '#F17021',
+        vetDark: '#3D5B43',
+        vetLight: '#557A5F',
+        vetGray: '#F2F2F2',
       },
       fontFamily: {
         sans: ['var(--font-montserrat)', 'sans-serif'],
+        cursive: ['var(--font-marck)', 'cursive'],
       },
     },
   },
