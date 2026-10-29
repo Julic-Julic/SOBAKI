@@ -1,39 +1,50 @@
-// src/app/services/[slug]/page.js
-import { notFound } from 'next/navigation';
-import { services } from '../../data';
-import Link from 'next/link';
+import HeroSection from './components/HeroSection';
+import PromoSlider from './components/PromoSlider';
+import FeaturesGrid from './components/FeaturesGrid';
+import ContactForm from './components/ContactForm';
+import ServicesSection from './components/ServicesSection';
+import TeamSection from './components/TeamSection';
+import Image from 'next/image';
 
-export default function ServicePage({ params }) {
-  const service = services.find((s) => s.id === params.slug);
-
-  if (!service) {
-    notFound(); // Вызовет кастомную 404 страницу
-  }
-
+export default function Home() {
   return (
-    <div className="pt-32 pb-20 bg-vetBgLight min-h-screen">
-      <div className="container mx-auto px-4 max-w-4xl">
-        <Link href="/#services" className="text-vetOrange font-semibold mb-8 inline-block hover:underline">
-          &larr; Назад ко всем услугам
-        </Link>
-        
-        <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm">
-          <div className="text-6xl mb-6">{service.icon}</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-vetGreenDark mb-6">{service.title}</h1>
-          <p className="text-lg text-gray-600 mb-8">{service.desc}</p>
-          
-          <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">Как проходит процедура?</h3>
-            <p className="text-gray-600 mb-4">
-              Наши специалисты используют только современное оборудование и проверенные методики. 
-              Мы обеспечиваем максимальный комфорт и безопасность для вашего питомца на всех этапах.
-            </p>
-            <button className="bg-vetOrange text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
-              Записаться на услугу
-            </button>
+    <main>
+      <HeroSection />
+      <PromoSlider />
+      <FeaturesGrid />
+      
+      {/* Вызов врача на дом */}
+      <section className="bg-vetLight py-20">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="md:w-1/2 relative h-[400px] w-full rounded-3xl overflow-hidden">
+             {/* Временно используем dog-hero.png */}
+             <Image src="/dog-hero.png" alt="Врач" fill className="object-cover object-bottom" />
+          </div>
+          <div className="md:w-1/2 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Вызов врача на дом</h2>
+            <p className="text-white/80 mb-8 max-w-sm text-sm">Вашему питомцу требуется неотложная помощь? Приедем в течение 40 минут!</p>
+            <ContactForm buttonText="отправить" />
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <ServicesSection />
+      <TeamSection />
+
+      {/* Записаться на прием */}
+      <section className="bg-vetLight py-20">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12">
+           <div className="md:w-1/2 relative h-[400px] w-full rounded-3xl overflow-hidden">
+             {/* Временно используем dog-hero.png */}
+             <Image src="/dog-hero.png" alt="Собака" fill className="object-cover" />
+          </div>
+          <div className="md:w-1/2 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Запишитесь на прием <br/><span className="italic font-light">прямо сейчас!</span></h2>
+            <p className="text-white/80 mb-8 max-w-sm text-sm">Не откладывайте профилактику и лечение заболеваний питомца, оставляйте заявку и наш менеджер свяжется с вами</p>
+            <ContactForm buttonText="отправить" />
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
