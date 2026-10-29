@@ -17,8 +17,8 @@ export default function Home() {
       <section className="bg-vetLight py-20">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-1/2 relative h-[400px] w-full rounded-3xl overflow-hidden">
-             {/* Временно используем dog-hero.png */}
-             <Image src="/dog-hero.png" alt="Врач" fill className="object-cover object-bottom" />
+             {/* Ставим вашу картинку врача */}
+             <Image src="/doctor-call.jpg.png" alt="Врач" fill className="object-cover object-bottom" />
           </div>
           <div className="md:w-1/2 text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Вызов врача на дом</h2>
@@ -35,8 +35,8 @@ export default function Home() {
       <section className="bg-vetLight py-20">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12">
            <div className="md:w-1/2 relative h-[400px] w-full rounded-3xl overflow-hidden">
-             {/* Временно используем dog-hero.png */}
-             <Image src="/dog-hero.png" alt="Собака" fill className="object-cover" />
+             {/* Ставим вашу картинку собаки в ошейнике */}
+             <Image src="/dog-collar.jpg.jpg" alt="Собака" fill className="object-cover" />
           </div>
           <div className="md:w-1/2 text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Запишитесь на прием <br/><span className="italic font-light">прямо сейчас!</span></h2>
