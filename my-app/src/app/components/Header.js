@@ -1,53 +1,56 @@
-import Image from "next/image";
+// src/app/components/Header.js
+"use client";
+
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="z-50 fixed w-full">
-      <div className="bg-white rounded-b-[40px] shadow-sm">
-        <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 md:px-10 py-3 md:py-4">
-          <a href="/" className="flex items-center gap-3 shrink-0">
-            <Image
-              src="/logo.png"
-              alt="Доктор Тома"
-              width={64}
-              height={64}
-              className="object-contain w-12 h-12 md:w-16 md:h-16 shrink-0"
-              priority
-            />
-            <span className="font-bold text-lg md:text-2xl tracking-wide whitespace-nowrap leading-none flex items-center">
-              <span className="text-[#4A9B3E]">ДОКТОР&nbsp;</span>
-              <span className="text-[#F58220]">ТОМА</span>
-            </span>
+    <header className="absolute top-0 w-full z-50 text-white p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* Логотип */}
+        <Link href="/">
+          <Image 
+            src="/logo.png" 
+            alt="Доктор Тома" 
+            width={150} 
+            height={50} 
+            className="object-contain" 
+          />
+        </Link>
+        
+        {/* Контакты (десктоп) */}
+        <div className="hidden md:flex items-center space-x-8 text-sm">
+          <span>Парковый, ул.Чайковского, 48А</span>
+          <a href="tel:+79660764366" className="font-bold text-lg hover:text-vetOrange transition">
+            +7 (966) 076 43 66
           </a>
-          <div className="hidden md:flex flex-col items-start text-left leading-tight">
-            <span className="text-[11px] text-gray-400 font-medium">
-              Работаем круглосуточно
-            </span>
-            <span className="text-base md:text-lg font-medium text-gray-900 mt-0.5">
-              Подольск, ул.Чайковского, 48А
-            </span>
-          </div>
-
-          <div className="flex items-center gap-5 md:gap-10">
-            <a
-              href="tel:+795867964366"
-              className="font-medium text-sm md:text-base text-gray-900 hover:text-[#F58220] transition-colors whitespace-nowrap"
-            >
-              +7 (956) 6796 43 66
-            </a>
-
-            <button
-              type="button"
-              aria-label="Меню"
-              className="flex flex-col gap-[5px] w-7 h-7 justify-center items-end cursor-pointer bg-transparent border-0 p-0 group"
-            >
-              <span className="w-7 h-[2px] bg-black group-hover:bg-[#F58220] transition-colors"></span>
-              <span className="w-7 h-[2px] bg-black group-hover:bg-[#F58220] transition-colors"></span>
-              <span className="w-7 h-[2px] bg-black group-hover:bg-[#F58220] transition-colors"></span>
-            </button>
-          </div>
         </div>
+
+        {/* Кнопка мобильного меню (бургер) */}
+        <button 
+          className="md:hidden z-50 flex flex-col gap-1.5" 
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Меню"
+        >
+          <div className={`w-6 h-0.5 bg-white transition-transform ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
+          <div className={`w-6 h-0.5 bg-white transition-opacity ${isOpen ? 'opacity-0' : 'opacity-100'}`}></div>
+          <div className={`w-6 h-0.5 bg-white transition-transform ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
+        </button>
       </div>
+
+      {/* Выпадающее мобильное меню */}
+      {isOpen && (
+        <div className="fixed inset-0 bg-vetGreenDark flex flex-col items-center justify-center space-y-6 text-xl md:hidden">
+          <Link href="/" onClick={() => setIsOpen(false)}>Главная</Link>
+          <Link href="/#services" onClick={() => setIsOpen(false)}>Услуги</Link>
+          <Link href="/#team" onClick={() => setIsOpen(false)}>Специалисты</Link>
+          <a href="tel:+79660764366" className="font-bold text-vetOrange mt-4">+7 (966) 076 43 66</a>
+        </div>
+      )}
     </header>
   );
 }
