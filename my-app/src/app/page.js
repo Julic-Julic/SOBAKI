@@ -13,7 +13,7 @@ export default function Home() {
       <PromoSlider />
       <FeaturesGrid />
       
-      <section className="bg-[#496937] py-20">
+      <section id="appointment" className="bg-[#496937] py-20">
       <div className="container mx-auto px-4 max-w-[1100px]">
 
           <div className="relative bg-[#43453F] rounded-[50px] overflow-hidden min-h-[450px] flex items-center shadow-xl">

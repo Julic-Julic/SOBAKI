@@ -3,7 +3,7 @@ import { team } from '../data';
 
 export default function TeamSection() {
   return (
-    <section className="py-20 bg-[#496937] text-white" id="team">
+    <section id="team" className="py-20 bg-[#496937] text-white">
       <div className="container mx-auto px-4 max-w-[1200px]">
 
         <div className="mb-12 flex flex-col items-start text-left">

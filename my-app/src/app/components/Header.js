@@ -39,11 +39,12 @@ export default function Header() {
         </div>
       </div>
 
-      {isOpen && (
-        <div className="absolute top-24 left-4 right-4 bg-white rounded-2xl shadow-xl p-6 flex flex-col gap-4 md:hidden">
-          <Link href="/" onClick={() => setIsOpen(false)} className="font-semibold hover:text-vetOrange">Главная</Link>
-          <Link href="/#services" onClick={() => setIsOpen(false)} className="font-semibold hover:text-vetOrange">Услуги</Link>
-          <Link href="/#team" onClick={() => setIsOpen(false)} className="font-semibold hover:text-vetOrange">Специалисты</Link>
+                  {isOpen && (
+        <div className="absolute top-24 left-100 right-20 bg-white rounded-2xl shadow-xl p-6 flex flex-col gap-4 z-50">
+            <a href="#home" onClick={() => setIsOpen(false)} className="font-semibold text-gray-800 hover:text-[#F17021] transition">Главная</a>
+            <a href="#services" onClick={() => setIsOpen(false)} className="font-semibold text-gray-800 hover:text-[#F17021] transition">Услуги</a>
+            <a href="#team" onClick={() => setIsOpen(false)} className="font-semibold text-gray-800 hover:text-[#F17021] transition">Специалисты</a>
+            <a href="#appointment" onClick={() => setIsOpen(false)} className="font-semibold text-[#F17021] mt-2 border-t border-gray-100 pt-4">Записаться на прием</a>
         </div>
       )}
     </header>
