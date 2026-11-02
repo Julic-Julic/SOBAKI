@@ -3,8 +3,18 @@ import { team } from '../data';
 
 export default function TeamSection() {
   return (
-    <section id="team" className="py-20 bg-[#496937] text-white">
-      <div className="container mx-auto px-4 max-w-[1200px]">
+    <section id="team" className="py-20 bg-[#496937] text-white relative overflow-hidden">
+
+      <div className="absolute top-0 left-0 w-full h-[400px] z-0 pointer-events-none opacity-40">
+        <Image 
+          src="/x5.png" 
+          alt="Декор" 
+          fill 
+          className="object-contain object-left-top" 
+        />
+      </div>
+
+      <div className="container mx-auto px-4 max-w-[1200px] relative z-10">
 
         <div className="mb-12 flex flex-col items-start text-left">
 

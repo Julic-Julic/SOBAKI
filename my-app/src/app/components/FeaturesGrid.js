@@ -4,6 +4,25 @@ import { features } from '../data';
 export default function FeaturesGrid() {
   return (
     <section className="bg-[#496937] text-white py-20 relative overflow-hidden">
+      
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-20">
+        <Image 
+          src="/x2.png" 
+          alt="Фоновый узор" 
+          fill 
+          className="object-cover object-center" 
+        />
+      </div>
+
+      <div className="absolute -top-8 right-20 w-[200px] h-[200px] z-20 pointer-events-none">
+        <Image 
+          src="/x1.png" 
+          alt="Декор" 
+          fill 
+          className="object-contain" 
+        />
+      </div>
+
       <div className="container mx-auto px-4 relative z-10 max-w-[1200px]">
         
         <div className="mb-12">
@@ -31,6 +50,18 @@ export default function FeaturesGrid() {
                 ${feat.type === 'orange' ? 'bg-[#F17021]' : ''}
               `}
             >
+
+              {feat.type === 'default' && !feat.image && (
+                <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+                   <Image 
+                     src="/pattern-paws.png" 
+                     alt="Паттерн" 
+                     fill 
+                     className="object-cover" 
+                   />
+                </div>
+              )}
+
               {feat.image && (
                 <>
                   <Image 
@@ -79,6 +110,16 @@ export default function FeaturesGrid() {
         </div>
 
       </div>
+
+      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[450px] md:w-[900px] h-[200px] z-0 pointer-events-none opacity-40">
+        <Image 
+          src="/x3.png" 
+          alt="Декоративные линии" 
+          fill 
+          className="object-contain object-bottom" 
+        />
+      </div>
+
     </section>
   );
 }

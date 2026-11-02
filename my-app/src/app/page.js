@@ -13,7 +13,7 @@ export default function Home() {
       <PromoSlider />
       <FeaturesGrid />
       
-      <section id="appointment" className="bg-[#496937] py-20">
+      <section className="bg-[#496937] py-20">
       <div className="container mx-auto px-4 max-w-[1100px]">
 
           <div className="relative bg-[#43453F] rounded-[50px] overflow-hidden min-h-[450px] flex items-center shadow-xl">
@@ -40,10 +40,19 @@ export default function Home() {
 
       <ServicesSection />
       <TeamSection />
+      
       <section className="bg-[#496937] py-20">
         <div className="container mx-auto px-4 max-w-[1100px]">
     
           <div className="relative bg-[#74806A] rounded-[50px] overflow-hidden min-h-[500px] flex items-center shadow-xl">
+            <div className="absolute -top-4 right-5 w-[120px] h-[120px] z-20 pointer-events-none">
+              <Image 
+                src="/x6.png" 
+                alt="Декор" 
+                fill 
+                className="object-contain" 
+              />
+            </div>
 
             <Image 
               src="/dog-collar.jpg" 

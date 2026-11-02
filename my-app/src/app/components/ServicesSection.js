@@ -1,4 +1,3 @@
-// src/app/components/ServicesSection.js
 import Link from 'next/link';
 import Image from 'next/image';
 import { services } from '../data';
@@ -7,10 +6,17 @@ export default function ServicesSection() {
   return (
     <section id="services" className="py-20 bg-[#496937] text-white relative overflow-hidden">
       
-      
+      <div className="absolute top-40 left-0 w-[100%] md:w-[500px] h-[200px] z-0 pointer-events-none opacity-80">
+        <Image 
+          src="/x4.png" 
+          alt="Декор" 
+          fill 
+          className="object-contain object-left" 
+        />
+      </div>
+
       <div className="container mx-auto px-4 max-w-[1200px] relative z-10">
         
-
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
           
           <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-start">
